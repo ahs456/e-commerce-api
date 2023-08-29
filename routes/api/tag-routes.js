@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
       include: [{model: Product}],
     });
     if (!tagData) {
-      res.status(404).json({message: 'Cannot find category with that id.'});
+      res.status(404).json({message: 'Cannot find tag with that id.'});
       return;
     }
     res.status(200).json(tagData);
@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
         },
       });
       if (!tagData) {
-        res.status(404).json({message: 'Cannot find category with that id.'});
+        res.status(404).json({message: 'Cannot tag category with that id.'});
         return;
       }
       res.status(200).json(tagData);
@@ -68,7 +68,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     if (!tagData) {
-      res.status(404).json({message: 'Cannot find category with that id.'});
+      res.status(404).json({message: 'Cannot tag category with that id.'});
       return;
     }
     res.status(200).json(tagData);
